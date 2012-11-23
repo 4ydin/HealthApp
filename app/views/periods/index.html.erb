@@ -1,0 +1,27 @@
+<h1>Listing periods</h1>
+
+<table>
+  <tr>
+    <th>Started at</th>
+    <th>Finished</th>
+    <th>Duration</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @periods.each do |period| %>
+  <tr>
+    <td><%= period.started_at %></td>
+    <td><%= period.finished %></td>
+    <td><%= period.duration %></td>
+    <td><%= link_to 'Show', period %></td>
+    <td><%= link_to 'Edit', edit_period_path(period) %></td>
+    <td><%= link_to 'Destroy', period, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Period', new_period_path %>

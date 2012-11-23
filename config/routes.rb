@@ -1,4 +1,12 @@
 HealthApp::Application.routes.draw do
+  resources :periods
+
+  resources :tips
+
+  resources :foods
+
+  resources :users
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
