@@ -11,7 +11,31 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121118174826) do
+ActiveRecord::Schema.define(:version => 20121127141213) do
+
+  create_table "foods", :force => true do |t|
+    t.string   "name"
+    t.integer  "calory"
+    t.integer  "protein"
+    t.integer  "carbohydrate"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "periods", :force => true do |t|
+    t.date     "started_at"
+    t.date     "finished_at"
+    t.integer  "duration"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "tips", :force => true do |t|
+    t.string   "name"
+    t.text     "context"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"
@@ -21,8 +45,10 @@ ActiveRecord::Schema.define(:version => 20121118174826) do
     t.string   "password"
     t.integer  "height"
     t.integer  "weight"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.boolean  "admin",      :default => false
+    t.datetime "last_login"
   end
 
 end
