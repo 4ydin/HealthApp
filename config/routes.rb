@@ -4,6 +4,7 @@ HealthApp::Application.routes.draw do
   get "start/help"
   get "start/about"
   get "start/contact"
+  get "start/signup"
 
 
   resources :periods
