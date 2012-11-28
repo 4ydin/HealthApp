@@ -5,4 +5,7 @@ class StartController < ApplicationController
 			format.html #index.html.erb
 		end
 	end
+
+	def contact
+	end
 end

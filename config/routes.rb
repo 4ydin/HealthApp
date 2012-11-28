@@ -1,4 +1,11 @@
 HealthApp::Application.routes.draw do
+  get "users/new"
+  get "start/index"
+  get "start/help"
+  get "start/about"
+  get "start/contact"
+
+
   resources :periods
 
   resources :tips
@@ -6,6 +13,13 @@ HealthApp::Application.routes.draw do
   resources :foods
 
   resources :users
+ 
+  root to: 'start#index'
+  match '/signup', to: 'users#new'
+
+  match '/help',    to: 'start#help'
+  match '/about',   to: 'start#about'
+  match '/contact', to: 'start#contact'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
