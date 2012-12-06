@@ -8,6 +8,14 @@
               <li><%= link_to "Home",    welcomePage_path %></li>
               <li><%= link_to "Help", help_path %></li>
               <li><%= link_to "Sign in", '#' %></li>
+              <li>
+              <%= form_tag users_path, :method => 'get' do %>
+                <p>
+                <%= search_field_tag :search %>
+                <%= submit_tag "Search", :name => nil %>
+                </p>
+              <% end %>
+              </li>
             </ul>
           </nav>
         </div>
