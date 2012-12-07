@@ -8,6 +8,7 @@ HealthApp::Application.routes.draw do
   get "users/show"
   get "sessions/new"
   post "sessions/create"
+  delete "sessions/destroy"
 
   resources :periods
 
@@ -21,7 +22,7 @@ HealthApp::Application.routes.draw do
  
   match '/signup', to: 'users#new'
   match '/signin', to: 'sessions#new'
-  match '/signout', to: 'sessions#destroy'
+  match '/signout', to: 'sessions#destroy', via: :delete
   match '/help',    to: 'start#help'
   match '/about',   to: 'start#about'
   match '/contact', to: 'start#contact'
