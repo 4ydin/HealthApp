@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121127141213) do
+ActiveRecord::Schema.define(:version => 20121207001653) do
 
   create_table "foods", :force => true do |t|
     t.string   "name"
@@ -45,10 +45,14 @@ ActiveRecord::Schema.define(:version => 20121127141213) do
     t.string   "password"
     t.integer  "height"
     t.integer  "weight"
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
-    t.boolean  "admin",      :default => false
+    t.datetime "created_at",                               :null => false
+    t.datetime "updated_at",                               :null => false
+    t.boolean  "admin",                 :default => false
     t.datetime "last_login"
+    t.string   "pass_confirm"
+    t.string   "password_confirmation"
+    t.string   "password_digest"
+    t.string   "persistence_token"
   end
 
 end

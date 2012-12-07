@@ -6,6 +6,7 @@ class CreateUsers < ActiveRecord::Migration
       t.date :birth_date
       t.string :email
       t.string :password
+      t.string :password_confirmartion
       t.integer :height
       t.integer :weight
 

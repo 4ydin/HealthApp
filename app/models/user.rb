@@ -17,6 +17,7 @@
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :birth_date, :email, :height, :name, :password, :username, :weight
-
+  attr_accessible :birth_date, :email, :password, :password_confirmation, :height, :name, :username, :weight
+  has_secure_password
+  acts_as_authentic
 end
