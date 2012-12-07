@@ -22,6 +22,7 @@ HealthApp::Application.routes.draw do
   match '/about',   to: 'start#about'
   match '/contact', to: 'start#contact'
 
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
