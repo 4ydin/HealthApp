@@ -6,7 +6,8 @@ HealthApp::Application.routes.draw do
   get "start/contact"
   get "start/signup"
   get "users/show"
-
+  get "sessions/new"
+  post "sessions/create"
 
   resources :periods
 
@@ -15,10 +16,12 @@ HealthApp::Application.routes.draw do
   resources :foods
 
   resources :users
- 
-  root to: 'start#index'
-  match '/signup', to: 'users#new'
 
+  resources :sessions, only: [:new, :create, :destroy]
+ 
+  match '/signup', to: 'users#new'
+  match '/signin', to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy'
   match '/help',    to: 'start#help'
   match '/about',   to: 'start#about'
   match '/contact', to: 'start#contact'
