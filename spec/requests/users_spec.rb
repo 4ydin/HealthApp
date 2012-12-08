@@ -12,7 +12,7 @@ describe "Users" do
 
   subject { @user }
 
-  it { should respond_to(:name) }
+  it { should respond_to(:username) }
   it { should respond_to(:email) } 
   end
 end
