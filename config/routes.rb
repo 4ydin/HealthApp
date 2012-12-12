@@ -1,4 +1,15 @@
 HealthApp::Application.routes.draw do
+  get "users/new"
+  get "start/index"
+  get "start/help"
+  get "start/about"
+  get "start/contact"
+  get "start/signup"
+  get "users/show"
+  get "sessions/new"
+  post "sessions/create"
+  delete "sessions/destroy"
+
   resources :periods
 
   resources :tips
@@ -6,6 +17,15 @@ HealthApp::Application.routes.draw do
   resources :foods
 
   resources :users
+
+  resources :sessions, only: [:new, :create, :destroy]
+ 
+  match '/signup', to: 'users#new'
+  match '/signin', to: 'sessions#new'
+  match '/signout', to: 'sessions#destroy', via: :delete
+  match '/help',    to: 'start#help'
+  match '/about',   to: 'start#about'
+  match '/contact', to: 'start#contact'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
