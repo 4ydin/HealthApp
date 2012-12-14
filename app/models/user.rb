@@ -25,4 +25,5 @@ class User < ActiveRecord::Base
                   uniqueness: { case_sensitive: false }
   validates :password, length: { minimum: 1}, :on => :create   
   validates :password_confirmation, presence: { message: "Password can't be blank" }
+  has_one :profile
 end

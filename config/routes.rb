@@ -1,4 +1,8 @@
 HealthApp::Application.routes.draw do
+  resources :profiles
+
+  resources :data
+
   get "users/new"
   get "start/index"
   get "start/help"

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Weight:</b>
+  <%= @profile.weight %>
+</p>
+
+<p>
+  <b>Height:</b>
+  <%= @profile.height %>
+</p>
+
+
+<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<%= link_to 'Back', profiles_path %>
