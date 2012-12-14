@@ -9,8 +9,11 @@ class CreateUsers < ActiveRecord::Migration
       t.string :password_confirmartion
       t.integer :height
       t.integer :weight
-
+      t.string :persistence_token
+      
       t.timestamps
     end
+
+
   end
 end
