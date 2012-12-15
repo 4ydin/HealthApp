@@ -1,7 +1,4 @@
 HealthApp::Application.routes.draw do
-  resources :profiles
-
-  resources :data
 
   get "users/new"
   get "start/index"
@@ -13,6 +10,9 @@ HealthApp::Application.routes.draw do
   get "sessions/new"
   post "sessions/create"
   delete "sessions/destroy"
+  get "profiles/new"
+  get "profiles/show"
+  get "profiles/edit"
 
   resources :periods
 
@@ -24,12 +24,18 @@ HealthApp::Application.routes.draw do
 
   resources :sessions, only: [:new, :create, :destroy]
  
+  resources :profiles
+
   match '/signup', to: 'users#new'
   match '/signin', to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
   match '/help',    to: 'start#help'
   match '/about',   to: 'start#about'
   match '/contact', to: 'start#contact'
+
+
+  # find the profile belonging to an user
+  #match 'profiles/:profile_id/users' => 'profiles#showProfileFromUser', :as => :showProfileUser 
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

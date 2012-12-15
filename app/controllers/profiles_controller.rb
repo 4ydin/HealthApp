@@ -10,6 +10,7 @@ class ProfilesController < ApplicationController
     end
   end
 
+
   # GET /profiles/1
   # GET /profiles/1.json
   def show

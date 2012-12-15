@@ -41,12 +41,15 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(params[:user])
+    @profile = Profile.new(params[:profile])
+    @user.profile = @profile
 
     respond_to do |format|
       if @user.save
         flash[:success] = "Welcome to the CalBook!"
-        format.html { redirect_to users_path, notice: 'User was successfully created.' }
+        format.html { redirect_to signin_path, notice: 'User was successfully created.' }
         format.json { render json: @user, status: :created, location: @user }
+        format.json { render json: @profile, status: :created, location: @profile }
       else
         format.html { redirect_to new_user_path, notice: 'User was not successfully created.'}
         format.json { render json: @user.errors, status: :unprocessable_entity }
@@ -73,7 +76,7 @@ class UsersController < ApplicationController
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
-    @user = User.find(params[:id])
+    @user = User.find(params[:id], :include => :profile)
     @user.destroy
 
     respond_to do |format|

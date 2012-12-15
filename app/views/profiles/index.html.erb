@@ -2,6 +2,8 @@
 
 <table>
   <tr>
+    <th>Name</th>
+    <th>Birthdate</th>
     <th>Weight</th>
     <th>Height</th>
     <th></th>
@@ -11,6 +13,8 @@
 
 <% @profiles.each do |profile| %>
   <tr>
+    <td><%= profile.name %></td>
+    <td><%= profile.birth_date %></td>
     <td><%= profile.weight %></td>
     <td><%= profile.height %></td>
     <td><%= link_to 'Show', profile %></td>

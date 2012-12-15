@@ -6,9 +6,10 @@
       <h1>
         <%= gravatar_for @user %>
         <%= @user.username %>
- 	  </h1>
+    </h1>
     </section>
   </aside>
+
 
 <div class="span8">
 <p>
@@ -21,14 +22,9 @@
   <%= @user.email %>
 </p>
 
-<p>
-  <b>Weight and Height:</b>
-  <%= link_to "Weight and Height",  profiles_path %>
-</p>
 
 
 
-<%= link_to 'Setting Profile', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Setting Accout', edit_user_path %> 
 </div>
 </div>
