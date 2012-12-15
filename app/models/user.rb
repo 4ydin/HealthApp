@@ -26,4 +26,11 @@ class User < ActiveRecord::Base
   validates :password, length: { minimum: 1}, :on => :create   
   validates :password_confirmation, presence: { message: "Password can't be blank" }
   has_one :profile
+  def self.search(search)
+  	if search
+    	find(:all, :conditions => ['username LIKE ?', "%#{search}%"])
+  	else
+    	find(:all)
+  	end
+  end
 end

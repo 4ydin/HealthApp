@@ -8,6 +8,12 @@
           <li><%= link_to "Home", welcomePage_path %></li>
           <li><%= link_to "Help", help_path %></li>
           <% if signed_in? %>
+            <%= form_tag users_path, :method => 'get' do %>
+              <p>
+               <%= text_field_tag :search, params[:search] %>
+                <%= submit_tag "Search", :username => nil %>
+              </p>
+            <% end %>
             <li><%= link_to "Users", '#' %></li>
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -20,7 +26,7 @@
                 <li>
                   <%= link_to "Sign out", signout_path, method: "delete" %>
                 </li>
-              </ul>
+                </ul>            
             </li>
           <% else %>
             <li><%= link_to "Sign in", signin_path %></li>
