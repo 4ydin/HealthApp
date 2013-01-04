@@ -48,11 +48,14 @@ ActiveRecord::Schema.define(:version => 20121214211617) do
     t.string   "username"
     t.string   "email"
     t.string   "password"
-    t.string   "password_confirmartion"
-    t.string   "persistence_token"
-    t.datetime "created_at",             :null => false
-    t.datetime "updated_at",             :null => false
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+    t.string   "password_confirmation"
     t.string   "password_digest"
+    t.string   "persistence_token"
+    t.string   "remember_token"
   end
+
+  add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
 
 end

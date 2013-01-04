@@ -3,10 +3,6 @@
       <div class="navbar-inner">
         <div class="container">
           <%= link_to "CalBook", welcomePage_path, :class => 'brand' %>
-          <nav>
-           <ul class="nav pull-right">
-          <li><%= link_to "Home", welcomePage_path %></li>
-          <li><%= link_to "Help", help_path %></li>
           <% if signed_in? %>
             <%= form_tag users_path, :method => 'get' do %>
               <p>
@@ -14,6 +10,12 @@
                 <%= submit_tag "Search", :username => nil %>
               </p>
             <% end %>
+          <% end %>
+          <nav>
+           <ul class="nav pull-right">
+          <li><%= link_to "Home", welcomePage_path %></li>
+          <li><%= link_to "Help", help_path %></li>
+          <% if signed_in? %>
             <li><%= link_to "Users", '#' %></li>
             <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
