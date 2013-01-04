@@ -3,9 +3,6 @@ namespace :db do
   task data: :environment do
     
     [Food].each(&:delete_all)
-    
-    
-     
 
     Food.create!(
         name: "Apple Pie (1 Piece)",

@@ -13,6 +13,8 @@ HealthApp::Application.routes.draw do
   get "profiles/new"
   get "profiles/show"
   get "profiles/edit"
+  get "foods/statistic"
+  get "foods/dailyCal"
 
   resources :periods
 
@@ -32,6 +34,8 @@ HealthApp::Application.routes.draw do
   match '/help',    to: 'start#help'
   match '/about',   to: 'start#about'
   match '/contact', to: 'start#contact'
+  match '/statistic', to: 'foods#statistic'
+  match '/dailyCal', to: 'foods#dailyCal'
 
 
   # find the profile belonging to an user
