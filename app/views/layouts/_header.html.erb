@@ -3,6 +3,14 @@
       <div class="navbar-inner">
         <div class="container">
           <%= link_to "CalBook", welcomePage_path, :class => 'brand' %>
+          <% if signed_in? %>
+            <%= form_tag users_path, :method => 'get' do %>
+              <p>
+               <%= text_field_tag :search, params[:search] %>
+                <%= submit_tag "Search", :username => nil %>
+              </p>
+            <% end %>
+          <% end %>
           <nav>
            <ul class="nav pull-right">
           <li><%= link_to "Home", welcomePage_path %></li>
@@ -19,7 +27,7 @@
                 <li>
                   <%= link_to "Sign out", signout_path, method: "delete" %>
                 </li>
-              </ul>
+                </ul>            
             </li>
   
           <% else %>
