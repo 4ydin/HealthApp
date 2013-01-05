@@ -1,17 +1,19 @@
-<h1>The Statistic of my daily total calories</h1>
-
+<div class="container">
+<h3>The Statistic of my daily total calories</h3>
+ 
 <%= javascript_tag do %>
 
-d3.json('', 
+ //var  data = <%= raw Daily.all.to_json %>
+ d3.json('', 
             function(data){
-            
+
                 var format = d3.time.format("%Y-%m-%dT%H:%M:%SZ");
 
                 //parse time format correct
                 data.forEach(function(d) {
-                    console.log(d.finished_at);
-                    d.finished_at = format.parse(d.finished_at);
-                    console.log(d.finished_at);
+                    console.log(d.created_at);
+                    d.finished_at = format.parse(d.created_at);
+                    console.log(d.created_at);
                   });
                 
                 //format percent
@@ -22,11 +24,11 @@ d3.json('',
                 height = 800;
 
                 var x = d3.time.scale()
-                    .domain(d3.extent(data, function(d) { return d.finished_at; }))
+                    .domain(d3.extent(data, function(d) { return d.created_at; }))
                    .range([0, width - margin.right - margin.left]);
 
                 var y = d3.scale.linear()
-                    .domain(d3.extent(data, function(d) { return d.result; }))
+                    .domain(d3.extent(data, function(d) { return d.total; }))
                     .range([150, 0]);
 
                 var xAxis = d3.svg.axis()
@@ -70,10 +72,12 @@ d3.json('',
                     .data(data)
                     .enter().append("rect")
                     .attr("class", "bar")
-                    .attr("x", function(d) { return x(d.finished_at); })
+                    .attr("x", function(d) { return x(d.created_at); })
                     .attr("width",  80)
-                    .attr("y", function(d) { console.log(d.result); return y(d.result); })
-                    .attr("height", function(d) { return 150 - y(d.result); });
+                    .attr("y", function(d) { console.log(d.total); return y(d.total); })
+                    .attr("height", function(d) { return 150 - y(d.total); });
+
+         }); 
               
-            }); 
 <% end %>
+</div>

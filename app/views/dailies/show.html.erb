@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Total:</b>
+  <%= @daily.total %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @daily.content %>
+</p>
+
+
+<%= link_to 'Edit', edit_daily_path(@daily) %> |
+<%= link_to 'Back', dailies_path %>

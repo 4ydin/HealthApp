@@ -1,0 +1,33 @@
+<!-- <h1>New daily</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', dailies_path %>
+ -->
+
+ <% provide(:title, 'Daily Calculation') %>
+<h1>My Daily Food</h1>
+<br>
+
+<div class="row">
+  <div class="span6 offset3">
+    <h4>What do you eat/drink today?</h4>
+    <%= form_for(@daily) do |f| %>
+    <p>
+     <%= f.collection_select(:content, Food.all, :name, :name) %>
+    </p>
+    <p>
+     <%= f.collection_select(:total, Food.all, :calory, :calory) %>
+    </p>
+    <p>
+      <br>
+      <%= f.submit "Count the Calories", class: "btn btn-large btn-primary" %>
+    </p>
+    <% end %>
+  </div>
+</div>
+
+
+<br>
+ <%= link_to "List of Foods", foods_path, :class => "btn" %>
+ <%= link_to "List of my daily Foods", dailies_path, :class => "btn" %>
