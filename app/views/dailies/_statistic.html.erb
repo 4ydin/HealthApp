@@ -6,30 +6,18 @@
  //var  data = <%= raw Daily.all.to_json %>
  d3.json('', 
             function(data){
-
-                var format = d3.time.format("%Y-%m-%dT%H:%M:%SZ");
-
-                //parse time format correct
-                data.forEach(function(d) {
-                    console.log(d.created_at);
-                    d.finished_at = format.parse(d.created_at);
-                    console.log(d.created_at);
-                  });
-                
-                //format percent
-                var formatPercent = d3.format(".0%");
               
-                var margin = {top: 40, right: 40, bottom: 40, left: 40},
-                width = 960,
-                height = 800;
+                var margin = {top: 20, right: 20, bottom: 30, left: 40},
+                width = 960 - margin.left - margin.right,
+                height = 610 - margin.top - margin.bottom;
 
                 var x = d3.time.scale()
-                    .domain(d3.extent(data, function(d) { return d.created_at; }))
-                   .range([0, width - margin.right - margin.left]);
+                .domain([new Date(2012, 12, 01), new Date(2013, 3, 01)])
+                .range([0, width]);
 
                 var y = d3.scale.linear()
-                    .domain(d3.extent(data, function(d) { return d.total; }))
-                    .range([150, 0]);
+                .domain([0,500])
+                .range([200, 0]);
 
                 var xAxis = d3.svg.axis()
                     .scale(x)
@@ -38,7 +26,6 @@
                 var yAxis = d3.svg.axis()
                     .scale(y)
                     .orient("left")
-                    .tickFormat(formatPercent);
 
                 var svg = d3.select("body").append("svg")
                     .attr("width", width)
@@ -52,11 +39,11 @@
                     .attr("class", "x axis")
                     .call(xAxis)
                     .append("text")
-                      .attr("transform", "translate(850)")
+                      .attr("transform", "translate(800)")
                       .attr("x", 8)
                       .attr("dx", "0.9em")
                       .style("text-anchor", "end")
-                      .text("Finished at");   
+                      .text("Date");   
 
                 svg.append("g")
                     .attr("class", "y axis")
@@ -66,16 +53,29 @@
                       .attr("y", 8)
                       .attr("dy", "0.9em")
                       .style("text-anchor", "end")
-                      .text("Result");
+                      .text("Total Calories");
 
                 svg.selectAll(".bar")
                     .data(data)
                     .enter().append("rect")
                     .attr("class", "bar")
-                    .attr("x", function(d) { return x(d.created_at); })
-                    .attr("width",  80)
+                    .attr("x", function(d) { return x(new Date(d.calculated_at)); })
+                    .attr("width",  20)
                     .attr("y", function(d) { console.log(d.total); return y(d.total); })
-                    .attr("height", function(d) { return 150 - y(d.total); });
+                    .attr("height", function(d) { return 200-y(d.total); });
+
+                d3.selectAll(".bar")
+                    .on('mouseover', function(d){
+                        svg.append('text')
+                        .attr("x", x(new Date(d.calculated_at)))
+                        .attr("y", y(d.total))
+                        .text(d.calculated_at)
+                        .attr('class','tip')
+                        .style("font-size","1.5em")
+                    })
+                    .on('mouseout', function(d){
+                        d3.selectAll(".tip").remove()
+                    });    
 
          }); 
               

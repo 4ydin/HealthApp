@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+
+<p>
+  <b>Date:</b>
+  <%= @daily.calculated_at %>
+</p>
 <p>
   <b>Total:</b>
   <%= @daily.total %>
@@ -11,5 +16,4 @@
 </p>
 
 
-<%= link_to 'Edit', edit_daily_path(@daily) %> |
-<%= link_to 'Back', dailies_path %>
+ <%= link_to "List of my daily Foods", dailies_path, :class => "btn" %>
