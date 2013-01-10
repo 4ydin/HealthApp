@@ -39,7 +39,7 @@ HealthApp::Application.routes.draw do
   match '/about',   to: 'start#about'
   match '/contact', to: 'start#contact'
   match '/statistic', to: 'dailies#statistic'
-  match 'profiles/:profile_id/dailies' => 'dailies#show', :as => :showDailyProfile 
+  #match 'profiles/:id/dailies' => 'dailies#show', :as => :showDailyProfile 
 
 
   # find the profile belonging to an user
