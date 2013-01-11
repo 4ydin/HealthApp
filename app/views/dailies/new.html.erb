@@ -18,11 +18,9 @@
      </p>
     <br>
     <p>
-     <%= f.collection_select(:content, Food.all, :name, :name) %>
+     <%= f.collection_select(:total, Food.all, :calory, :name) %>
     </p>
-    <p>
-     <%= f.collection_select(:total, Food.all, :calory, :calory) %>
-    </p>
+    
     <p>
       <br>
       <%= f.submit "Count the Calories", class: "btn btn-large btn-primary" %>
