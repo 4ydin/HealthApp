@@ -15,8 +15,7 @@ HealthApp::Application.routes.draw do
   get "profiles/edit"
   get "foods/statistic"
   get "foods/dailyCal"
-  post "dailies/new"
-
+  
 
   resources :periods
 
@@ -28,9 +27,11 @@ HealthApp::Application.routes.draw do
 
   resources :sessions, only: [:new, :create, :destroy]
  
-  resources :profiles
+  resources :profiles do
+    resources :dailies
+  end
 
-  resources :dailies
+  #resources :dailies
 
   match '/signup', to: 'users#new'
   match '/signin', to: 'sessions#new'
@@ -39,7 +40,7 @@ HealthApp::Application.routes.draw do
   match '/about',   to: 'start#about'
   match '/contact', to: 'start#contact'
   match '/statistic', to: 'dailies#statistic'
-  match 'profiles/:profile_id/dailies' => 'dailies#show', :as => :showDailyProfile 
+  match 'profiles/:profile_id/dailies' => 'dailies#show' 
 
 
   # find the profile belonging to an user
