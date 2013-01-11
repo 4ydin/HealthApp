@@ -2,7 +2,8 @@ class DailiesController < ApplicationController
   # GET /dailies
   # GET /dailies.json
   def index
-    @dailies = Daily.all
+    @profile = Profile.find(params[:profile_id])
+    @dailies = @profile.dailies.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +14,8 @@ class DailiesController < ApplicationController
   # GET /dailies/1
   # GET /dailies/1.json
   def show
-    @daily = Daily.find(params[:id])
+    @profile = Profile.find(params[:profile_id])
+    @daily = @profile.dailies.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +26,8 @@ class DailiesController < ApplicationController
   # GET /dailies/new
   # GET /dailies/new.json
   def new
-    @daily = Daily.new
+    @profile = Profile.find(params[:profile_id])
+    @daily = @profile.dailies.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -40,15 +43,17 @@ class DailiesController < ApplicationController
   # POST /dailies
   # POST /dailies.json
   def create
-    @daily = Daily.new(params[:daily])
+    @profile = Profile.find(params[:profile_id])
+    @daily = @profile.dailies.new(params[:daily])
+
 
     respond_to do |format|
       if @daily.save
-        format.html { redirect_to @daily, notice: 'Daily was successfully created.' }
-        format.json { render json: @daily, status: :created, location: @daily }
+        format.html { redirect_to profile_dailies_path(@profile), notice: 'Daily was successfully created.' }
+        format.json { render json: profile_dailies_path(@profile), status: :created, location: @daily }
       else
         format.html { render action: "new" , notice: 'Daily was NOT successfully created.' }
-        format.json { render json: @daily.errors, status: :unprocessable_entity }
+        #format.json { render json: @daily.errors, status: :unprocessable_entity }
       end
     end
   end
