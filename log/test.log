@@ -1,0 +1,102 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/contact" for 127.0.0.1 at 2013-01-12 13:53:01 +0100
+Processing by StartController#contact as HTML
+  Rendered start/contact.html.erb within layouts/application (350.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (5.0ms)
+  Rendered layouts/_footer.html.erb (3.0ms)
+Completed 200 OK in 3458ms (Views: 3457.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/help" for 127.0.0.1 at 2013-01-12 13:53:09 +0100
+Processing by StartController#help as HTML
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (30.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 53ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/about" for 127.0.0.1 at 2013-01-12 13:53:09 +0100
+Processing by StartController#about as HTML
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (20.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+Started GET "/signup" for 127.0.0.1 at 2013-01-12 13:53:10 +0100
+Processing by UsersController#new as HTML
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 558ms (Views: 522.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/signup" for 127.0.0.1 at 2013-01-12 13:53:10 +0100
+Processing by UsersController#new as HTML
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 20ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2013-01-12 13:53:11 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"username"=>"userName", "email"=>"userName@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create my account"}
+  [1m[35m (1.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('userName@example.com') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('userName') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."persistence_token" = '21d6cc397a39e15f9cf49f283b099ec2ea7a615fd4eb5de73af49ff6764d5e6c39c5d5a126326246318b4c13af4ce637095b65957a39068f207f833271240a2b' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('userName@example.com') LIMIT 1
+Binary data inserted for `string` type on column `password_digest`
+  [1m[36mSQL (103.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password", "password_confirmartion", "password_digest", "persistence_token", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Sat, 12 Jan 2013 12:53:14 UTC +00:00], ["email", "userName@example.com"], ["password", nil], ["password_confirmartion", nil], ["password_digest", "$2a$10$l/ygkFuICk.SeLB7g.OUWewop72x8PYLAPH7shiINvUpbix4fR0PS"], ["persistence_token", "21d6cc397a39e15f9cf49f283b099ec2ea7a615fd4eb5de73af49ff6764d5e6c39c5d5a126326246318b4c13af4ce637095b65957a39068f207f833271240a2b"], ["updated_at", Sat, 12 Jan 2013 12:53:14 UTC +00:00], ["username", "userName"]]
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "profiles" ("birth_date", "created_at", "height", "name", "updated_at", "weight") VALUES (?, ?, ?, ?, ?, ?)  [["birth_date", nil], ["created_at", Sat, 12 Jan 2013 12:53:14 UTC +00:00], ["height", nil], ["name", nil], ["updated_at", Sat, 12 Jan 2013 12:53:14 UTC +00:00], ["weight", nil]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/signin
+Completed 302 Found in 2440ms (ActiveRecord: 109.0ms)
+Started GET "/signin" for 127.0.0.1 at 2013-01-12 13:53:14 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/_form.html.erb (8.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 53ms (Views: 51.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (13.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Started GET "/signin" for 127.0.0.1 at 2013-01-12 13:53:14 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/_form.html.erb (5.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 17ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (1.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('userName@example.com') LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('userName') LIMIT 1
+  [1m[36mUser Exists (0.0ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."persistence_token" = '3b89da6100526d97677cd7853e33216d03b78c85e36874280cbefd55f3aac3a3fd12a01d240b3c1dfcd06d8f0d67e9249ecf35b1e65ba45aa51e61c1d7c4e285' LIMIT 1[0m
+  [1m[35mUser Exists (0.0ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('userName@example.com') LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Started GET "/signin" for 127.0.0.1 at 2013-01-12 13:53:14 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/_form.html.erb (5.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 17ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+Started POST "/sessions" for 127.0.0.1 at 2013-01-12 13:53:15 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "session"=>{"username"=>"userName", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."username" = 'userName' LIMIT 1
+Redirected to http://www.example.com/users/new
+Completed 302 Found in 339ms (ActiveRecord: 0.0ms)
+Started GET "/users/new" for 127.0.0.1 at 2013-01-12 13:53:15 +0100
+Processing by UsersController#new as HTML
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m

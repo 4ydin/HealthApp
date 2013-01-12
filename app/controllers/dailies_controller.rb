@@ -44,8 +44,7 @@ class DailiesController < ApplicationController
   # POST /dailies.json
   def create
     @profile = Profile.find(params[:profile_id])
-    params[:total] = params[:daily][:total1] + params[:daily][:total2] + params[:daily][:total3]
-    @daily = @profile.dailies.new(params[:daily][:total])
+    @daily = @profile.dailies.new(params[:daily])
 
 
     respond_to do |format|
