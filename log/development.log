@@ -3235,3 +3235,760 @@ Migrating to AddCalculatedAt2ToDaily (20130105204028)
 Migrating to AddProfileIdToDaily (20130111123650)
   [1m[35m (0.0ms)[0m  select sqlite_version(*)
   [1m[36m (1.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36mSQL (137.0ms)[0m  [1mDELETE FROM "foods"[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (247.0ms)[0m  [1mINSERT INTO "foods" ("calory", "carbohydrate", "created_at", "name", "protein", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["calory", 405], ["carbohydrate", 60], ["created_at", Sat, 12 Jan 2013 14:46:54 UTC +00:00], ["name", "Apple Pie (1 Piece)"], ["protein", 3], ["updated_at", Sat, 12 Jan 2013 14:46:54 UTC +00:00]]
+  [1m[35m (49.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "foods" ("calory", "carbohydrate", "created_at", "name", "protein", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["calory", 100], ["carbohydrate", 1], ["created_at", Sat, 12 Jan 2013 14:46:54 UTC +00:00], ["name", "Omelet (1 Egg)"], ["protein", 7], ["updated_at", Sat, 12 Jan 2013 14:46:54 UTC +00:00]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "foods" ("calory", "carbohydrate", "created_at", "name", "protein", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["calory", 235], ["carbohydrate", 27], ["created_at", Sat, 12 Jan 2013 14:46:54 UTC +00:00], ["name", "Croissant"], ["protein", 5], ["updated_at", Sat, 12 Jan 2013 14:46:54 UTC +00:00]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "foods" ("calory", "carbohydrate", "created_at", "name", "protein", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["calory", 225], ["carbohydrate", 50], ["created_at", Sat, 12 Jan 2013 14:46:54 UTC +00:00], ["name", "Rice, White, Cooked   (1 Cup)"], ["protein", 4], ["updated_at", Sat, 12 Jan 2013 14:46:54 UTC +00:00]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "foods" ("calory", "carbohydrate", "created_at", "name", "protein", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["calory", 160], ["carbohydrate", 41], ["created_at", Sat, 12 Jan 2013 14:46:54 UTC +00:00], ["name", "Coca cola Reguler (350 ml)"], ["protein", 0], ["updated_at", Sat, 12 Jan 2013 14:46:54 UTC +00:00]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "foods" ("calory", "carbohydrate", "created_at", "name", "protein", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["calory", 145], ["carbohydrate", 16], ["created_at", Sat, 12 Jan 2013 14:46:54 UTC +00:00], ["name", "Yoghurt Low-Fat Plain (240 ml)"], ["protein", 12], ["updated_at", Sat, 12 Jan 2013 14:46:54 UTC +00:00]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "foods" ("calory", "carbohydrate", "created_at", "name", "protein", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["calory", 60], ["carbohydrate", 21], ["created_at", Sat, 12 Jan 2013 14:46:54 UTC +00:00], ["name", "Lemon Juice (1 Cup)"], ["protein", 1], ["updated_at", Sat, 12 Jan 2013 14:46:54 UTC +00:00]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "foods" ("calory", "carbohydrate", "created_at", "name", "protein", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["calory", 220], ["carbohydrate", 2], ["created_at", Sat, 12 Jan 2013 14:46:54 UTC +00:00], ["name", "Chicken, Fried, FLour, Breast"], ["protein", 31], ["updated_at", Sat, 12 Jan 2013 14:46:54 UTC +00:00]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "foods" ("calory", "carbohydrate", "created_at", "name", "protein", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["calory", 210], ["carbohydrate", 26], ["created_at", Sat, 12 Jan 2013 14:46:54 UTC +00:00], ["name", "Chocolate Milk, Regular (1 Cup)"], ["protein", 8], ["updated_at", Sat, 12 Jan 2013 14:46:54 UTC +00:00]]
+  [1m[35m (11.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "foods" ("calory", "carbohydrate", "created_at", "name", "protein", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["calory", 245], ["carbohydrate", 28], ["created_at", Sat, 12 Jan 2013 14:46:54 UTC +00:00], ["name", "Hamburger, Regular (1 Piece)"], ["protein", 12], ["updated_at", Sat, 12 Jan 2013 14:46:54 UTC +00:00]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-12 16:18:36 +0100
+Processing by StartController#index as HTML
+  Rendered start/index.html.erb within layouts/application (160.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (7.0ms)
+  Rendered layouts/_footer.html.erb (4.0ms)
+Completed 200 OK in 6582ms (Views: 6581.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:44 +0100
+Served asset /bootstrap-responsive.css - 304 Not Modified (74ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:44 +0100
+Served asset /bootstrap.css - 304 Not Modified (162ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:44 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (78ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:44 +0100
+Served asset /application.css - 304 Not Modified (845ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:45 +0100
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:45 +0100
+Served asset /custom.css - 304 Not Modified (248ms)
+
+
+Started GET "/assets/dailies.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:46 +0100
+Served asset /dailies.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/foods.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:46 +0100
+Served asset /foods.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/periods.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:46 +0100
+Served asset /periods.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:46 +0100
+Served asset /profiles.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:46 +0100
+Served asset /scaffolds.css - 304 Not Modified (71ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:46 +0100
+Served asset /session.css - 304 Not Modified (25ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:47 +0100
+Served asset /sessions.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/start.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:47 +0100
+Served asset /start.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/tips.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:47 +0100
+Served asset /tips.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:47 +0100
+Served asset /users.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:47 +0100
+Served asset /jquery.js - 304 Not Modified (417ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:47 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (98ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:48 +0100
+Served asset /bootstrap.js - 304 Not Modified (75ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:48 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/d3.v2.min.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:48 +0100
+Served asset /d3.v2.min.js - 304 Not Modified (215ms)
+
+
+Started GET "/assets/dailies.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:48 +0100
+Served asset /dailies.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/foods.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:48 +0100
+Served asset /foods.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery-1.8.3.min.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:49 +0100
+Served asset /jquery-1.8.3.min.js - 304 Not Modified (141ms)
+
+
+Started GET "/assets/periods.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:49 +0100
+Served asset /periods.js - 304 Not Modified (73ms)
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:49 +0100
+Served asset /profiles.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:49 +0100
+Served asset /session.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/start.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:49 +0100
+Served asset /start.js - 304 Not Modified (72ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:49 +0100
+Served asset /sessions.js - 304 Not Modified (69ms)
+
+
+Started GET "/assets/tips.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:49 +0100
+Served asset /tips.js - 304 Not Modified (122ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:50 +0100
+Served asset /users.js - 304 Not Modified (74ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:50 +0100
+Served asset /application.js - 304 Not Modified (680ms)
+
+
+Started GET "/assets/logo3.jpg" for 127.0.0.1 at 2013-01-12 16:18:51 +0100
+Served asset /logo3.jpg - 304 Not Modified (46ms)
+
+
+Started GET "/signin" for 127.0.0.1 at 2013-01-12 16:18:52 +0100
+Processing by SessionsController#new as HTML
+  Rendered sessions/_form.html.erb (55.0ms)
+  Rendered sessions/new.html.erb within layouts/application (128.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 772ms (Views: 771.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:53 +0100
+Served asset /application.css - 304 Not Modified (167ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:53 +0100
+Served asset /bootstrap-responsive.css - 304 Not Modified (83ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:54 +0100
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:54 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:54 +0100
+Served asset /bootstrap.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:54 +0100
+Served asset /custom.css - 304 Not Modified (75ms)
+
+
+Started GET "/assets/dailies.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:54 +0100
+Served asset /dailies.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foods.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:54 +0100
+Served asset /foods.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/periods.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:54 +0100
+Served asset /periods.css - 304 Not Modified (60ms)
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:54 +0100
+Served asset /profiles.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:55 +0100
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:55 +0100
+Served asset /session.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:55 +0100
+Served asset /sessions.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/start.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:55 +0100
+Served asset /start.css - 304 Not Modified (68ms)
+
+
+Started GET "/assets/tips.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:55 +0100
+Served asset /tips.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-12 16:18:55 +0100
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:55 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:55 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:56 +0100
+Served asset /bootstrap.js - 304 Not Modified (68ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:56 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/d3.v2.min.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:56 +0100
+Served asset /d3.v2.min.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/dailies.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:56 +0100
+Served asset /dailies.js - 304 Not Modified (61ms)
+
+
+Started GET "/assets/foods.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:56 +0100
+Served asset /foods.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery-1.8.3.min.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:56 +0100
+Served asset /jquery-1.8.3.min.js - 304 Not Modified (82ms)
+
+
+Started GET "/assets/periods.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:56 +0100
+Served asset /periods.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:56 +0100
+Served asset /profiles.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:57 +0100
+Served asset /session.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:57 +0100
+Served asset /sessions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/start.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:57 +0100
+Served asset /start.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/tips.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:57 +0100
+Served asset /tips.js - 304 Not Modified (66ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:57 +0100
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-12 16:18:57 +0100
+Served asset /application.js - 304 Not Modified (140ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2013-01-12 16:19:01 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rrcw5bKB6WgQjMha2Ny9uugX7/La63izDKDeZDkOUBU=", "session"=>{"username"=>"aydin", "password"=>"[FILTERED]"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."username" = 'aydin' LIMIT 1[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 2104ms (ActiveRecord: 99.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2013-01-12 16:19:03 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_shim.html.erb (1.0ms)
+  Rendered layouts/_header.html.erb (11.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 1360ms (Views: 1354.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:05 +0100
+Served asset /bootstrap-responsive.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:05 +0100
+Served asset /application.css - 304 Not Modified (542ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:06 +0100
+Served asset /bootstrap.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:06 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:06 +0100
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:06 +0100
+Served asset /custom.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/dailies.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:07 +0100
+Served asset /dailies.css - 304 Not Modified (116ms)
+
+
+Started GET "/assets/foods.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:07 +0100
+Served asset /foods.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/periods.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:07 +0100
+Served asset /periods.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:07 +0100
+Served asset /profiles.css - 304 Not Modified (92ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:07 +0100
+Served asset /scaffolds.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:07 +0100
+Served asset /session.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:08 +0100
+Served asset /sessions.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/start.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:08 +0100
+Served asset /start.css - 304 Not Modified (91ms)
+
+
+Started GET "/assets/tips.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:08 +0100
+Served asset /tips.css - 304 Not Modified (92ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:08 +0100
+Served asset /users.css - 304 Not Modified (67ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:08 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:08 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:09 +0100
+Served asset /bootstrap.js - 304 Not Modified (81ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:09 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (85ms)
+
+
+Started GET "/assets/d3.v2.min.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:09 +0100
+Served asset /d3.v2.min.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/dailies.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:09 +0100
+Served asset /dailies.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/foods.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:09 +0100
+Served asset /foods.js - 304 Not Modified (88ms)
+
+
+Started GET "/assets/jquery-1.8.3.min.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:09 +0100
+Served asset /jquery-1.8.3.min.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/periods.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:09 +0100
+Served asset /periods.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:10 +0100
+Served asset /profiles.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:10 +0100
+Served asset /session.js - 304 Not Modified (89ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:10 +0100
+Served asset /sessions.js - 304 Not Modified (71ms)
+
+
+Started GET "/assets/start.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:10 +0100
+Served asset /start.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/tips.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:10 +0100
+Served asset /tips.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:10 +0100
+Served asset /users.js - 304 Not Modified (77ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:10 +0100
+Served asset /application.js - 304 Not Modified (264ms)
+
+
+Started GET "/profiles/1/dailies" for 127.0.0.1 at 2013-01-12 16:19:14 +0100
+Processing by DailiesController#index as HTML
+  Parameters: {"profile_id"=>"1"}
+  [1m[36mProfile Load (1.0ms)[0m  [1mSELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mDaily Load (0.0ms)[0m  SELECT "dailies".* FROM "dailies" WHERE "dailies"."profile_id" = 1
+  [1m[36mDaily Load (1.0ms)[0m  [1mSELECT "dailies".* FROM "dailies" [0m
+  Rendered dailies/_statistic.html.erb (56.0ms)
+  Rendered dailies/index.html.erb within layouts/application (98.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (6.0ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 2363ms (Views: 1079.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:17 +0100
+Served asset /bootstrap-responsive.css - 304 Not Modified (158ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:18 +0100
+Served asset /application.css - 304 Not Modified (134ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:18 +0100
+Served asset /bootstrap.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:18 +0100
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:18 +0100
+Served asset /custom.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:18 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (51ms)
+
+
+Started GET "/assets/dailies.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:19 +0100
+Served asset /dailies.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/foods.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:19 +0100
+Served asset /foods.css - 304 Not Modified (167ms)
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:19 +0100
+Served asset /profiles.css - 304 Not Modified (33ms)
+
+
+Started GET "/assets/periods.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:19 +0100
+Served asset /periods.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:20 +0100
+Served asset /scaffolds.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:20 +0100
+Served asset /session.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:20 +0100
+Served asset /sessions.css - 304 Not Modified (93ms)
+
+
+Started GET "/assets/start.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:20 +0100
+Served asset /start.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/tips.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:20 +0100
+Served asset /tips.css - 304 Not Modified (32ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:20 +0100
+Served asset /users.css - 304 Not Modified (82ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:21 +0100
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:21 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:21 +0100
+Served asset /bootstrap.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:21 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (163ms)
+
+
+Started GET "/assets/d3.v2.min.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:22 +0100
+Served asset /d3.v2.min.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/dailies.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:22 +0100
+Served asset /dailies.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery-1.8.3.min.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:22 +0100
+Served asset /jquery-1.8.3.min.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foods.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:22 +0100
+Served asset /foods.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/periods.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:22 +0100
+Served asset /periods.js - 304 Not Modified (37ms)
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:23 +0100
+Served asset /profiles.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:23 +0100
+Served asset /session.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:23 +0100
+Served asset /sessions.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/start.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:23 +0100
+Served asset /start.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/tips.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:23 +0100
+Served asset /tips.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:23 +0100
+Served asset /users.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:24 +0100
+Served asset /application.js - 304 Not Modified (201ms)
+
+
+Started GET "/profiles/1/dailies" for 127.0.0.1 at 2013-01-12 16:19:24 +0100
+Processing by DailiesController#index as JSON
+  Parameters: {"profile_id"=>"1"}
+  [1m[35mProfile Load (0.0ms)[0m  SELECT "profiles".* FROM "profiles" WHERE "profiles"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mDaily Load (1.0ms)[0m  [1mSELECT "dailies".* FROM "dailies" WHERE "dailies"."profile_id" = 1[0m
+Completed 200 OK in 9ms (Views: 2.0ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/signout" for 127.0.0.1 at 2013-01-12 16:19:27 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"rrcw5bKB6WgQjMha2Ny9uugX7/La63izDKDeZDkOUBU="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-12 16:19:27 +0100
+Processing by StartController#index as HTML
+  Rendered start/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_shim.html.erb (0.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (2.0ms)
+Completed 200 OK in 959ms (Views: 958.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:29 +0100
+Served asset /application.css - 304 Not Modified (816ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:29 +0100
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:30 +0100
+Served asset /bootstrap-responsive.css - 304 Not Modified (69ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:30 +0100
+Served asset /bootstrap.min.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:30 +0100
+Served asset /bootstrap.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:30 +0100
+Served asset /custom.css - 304 Not Modified (343ms)
+
+
+Started GET "/assets/dailies.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:31 +0100
+Served asset /dailies.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/foods.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:31 +0100
+Served asset /foods.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/periods.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:31 +0100
+Served asset /periods.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/profiles.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:31 +0100
+Served asset /profiles.css - 304 Not Modified (105ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:31 +0100
+Served asset /scaffolds.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/session.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:32 +0100
+Served asset /session.css - 304 Not Modified (115ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:32 +0100
+Served asset /sessions.css - 304 Not Modified (69ms)
+
+
+Started GET "/assets/start.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:32 +0100
+Served asset /start.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/tips.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:33 +0100
+Served asset /tips.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:33 +0100
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-01-12 16:19:33 +0100
+Served asset /users.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:33 +0100
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:34 +0100
+Served asset /bootstrap.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:34 +0100
+Served asset /bootstrap.min.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/d3.v2.min.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:34 +0100
+Served asset /d3.v2.min.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/dailies.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:34 +0100
+Served asset /dailies.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/foods.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:35 +0100
+Served asset /foods.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery-1.8.3.min.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:35 +0100
+Served asset /jquery-1.8.3.min.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/periods.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:35 +0100
+Served asset /periods.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/profiles.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:35 +0100
+Served asset /profiles.js - 304 Not Modified (127ms)
+
+
+Started GET "/assets/session.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:35 +0100
+Served asset /session.js - 304 Not Modified (80ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:36 +0100
+Served asset /sessions.js - 304 Not Modified (59ms)
+
+
+Started GET "/assets/start.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:36 +0100
+Served asset /start.js - 304 Not Modified (72ms)
+
+
+Started GET "/assets/tips.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:36 +0100
+Served asset /tips.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:36 +0100
+Served asset /users.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-01-12 16:19:36 +0100
+Served asset /application.js - 304 Not Modified (243ms)
+
+
+Started GET "/assets/logo3.jpg" for 127.0.0.1 at 2013-01-12 16:19:37 +0100
+Served asset /logo3.jpg - 304 Not Modified (3ms)
