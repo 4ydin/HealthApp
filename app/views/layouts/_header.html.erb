@@ -24,6 +24,7 @@
                 <li><%= link_to "Profile", profile_path(current_user) %></li>
                 <li><%= link_to "Account Settings", edit_user_path(current_user) %></li>
                  <li><%= link_to "Daily Food Statistic", profile_dailies_path(current_user) %></li>
+                 <li><%= link_to "Tips", tips_path %></li>
                 <li class="divider"></li>
                 <li>
                   <%= link_to "Sign out", signout_path, method: "delete" %>

@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b>
+<h3>
   <%= @tip.name %>
-</p>
+</h3>
 
 <p>
-  <b>Context:</b>
   <%= @tip.context %>
 </p>
 
-
+<!-- 
 <%= link_to 'Edit', edit_tip_path(@tip) %> |
-<%= link_to 'Back', tips_path %>
+
+ -->
+<%= link_to 'Back', tips_path,  :class => "btn" %>
