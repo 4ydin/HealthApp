@@ -19,6 +19,17 @@
   <%= @profile.height %>
 </p>
 
+<p>
+  <b>Gender:</b>
+  <%= @profile.gender %>
+</p>
+
+<p>
+  <b>Ideal Weight:</b>
+  <%= @profile.countIdealWeight(@profile.gender, @profile.height) %>
+</p>
+
+
 
 
 <%= link_to 'Edit profile', edit_profile_path(@profile) %> 
