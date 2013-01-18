@@ -16,7 +16,7 @@
 
 <p>
   <b>Height:</b>
-  <%= @profile.height %>
+  <%= @profile.height%>
 </p>
 
 <p>
@@ -25,10 +25,9 @@
 </p>
 
 <p>
-  <b>Ideal Weight:</b>
-  <%= @profile.countIdealWeight(@profile.gender, @profile.height) %>
-</p>
-
+ <b>Ideal Weight:</b>
+  <%= @profile.countIdealWeight(@profile.height, @profile.gender) %>
+</p> 
 
 
 
