@@ -3,7 +3,7 @@ namespace :db do
   task data: :environment do
     
     [Food].each(&:delete_all)
-
+    [Tip].each(&:delete_all)
 
     Food.create!(
         name: "Apple Pie (1 Piece)",
@@ -66,6 +66,24 @@ namespace :db do
         protein: 12,
         carbohydrate: 28,
         )
+      
+     
+    Tip.create!(
+        name: "Water therapy",
+        )
+    Tip.create!(
+        name: "Coffee as an antioxidants",
+        ) 
+    Tip.create!(
+        name: "Black beans",
+        ) 
+    Tip.create!(
+        name: "Avocado",
+        )
+    Tip.create!(
+        name: "Blueberries",
+        )
+
 
   end
 end
