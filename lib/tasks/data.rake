@@ -66,23 +66,30 @@ namespace :db do
         protein: 12,
         carbohydrate: 28,
         )
-      
+
      
     Tip.create!(
         name: "Water therapy",
+        context: "The colder the water you drink, the more calories you burn, since your body expends more energy warming up the water. If you have 8 glasses (64 oz) of ice-cold water in a day, you'll burn 70 more calories than if you drank 8 glasses of a body temperature beverage.",
         )
     Tip.create!(
         name: "Coffee as an antioxidants",
+        context: "Coffee contains hundreds of compounds that may help with research into some of the most prevalent diseases of our time and one of the most exciting discoveries is the significant presence of antioxidants within the coffee beans.
+        Antioxidants are proven to help mitigate the chances of heart diseases and cancer.",
         ) 
     Tip.create!(
         name: "Black beans",
+        context: "A cup of black beans packs a whopping 15 grams of satisfying protein and doesn't contain any of the saturated fat found in other protein sources, like red meat.",
         ) 
     Tip.create!(
         name: "Avocado",
+        context: "Stick to a quarter or a half of an avocado and watch that belly fat melt away. The creamy fruit is also packed with fiber and protein",
         )
     Tip.create!(
         name: "Blueberries",
+        context: "Best known for their anti-aging effects, blueberries, while tiny, are a powerful figure-friendly eat: A 1-cup serving sets you back only 80 calories, and helps you feel full with 4 grams of fiber.",
         )
+
 
 
   end
