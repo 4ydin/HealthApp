@@ -69,26 +69,26 @@ namespace :db do
 
      
     Tip.create!(
-        name: "Water therapy",
-        context: "The colder the water you drink, the more calories you burn, since your body expends more energy warming up the water. If you have 8 glasses (64 oz) of ice-cold water in a day, you'll burn 70 more calories than if you drank 8 glasses of a body temperature beverage.",
+        name: "Green Tea",
+        context: "Green tea is very famous to be a very great way to lose pounds quickly. Green tea is also rich in powerful antioxidants that can have great benefits for everybody. The green tea has special combination that attack fat and obviously is great to lose weight. Simply replace your coffee with green tea, but appearently not everyone drink coffee regularly. So, basicly just replace your other caffeinated beverages. You should drink 3-5 cups of green tea everyday. But, remember the green tea is only a part of a whole dieting plan, you should combine green tea with healthy diet and exercise regularly. P.s : Don't throw away the the used green tea leaves. Use them as a face mask. it helps you reduce the redness.",
         )
     Tip.create!(
-        name: "Coffee as an antioxidants",
-        context: "Coffee contains hundreds of compounds that may help with research into some of the most prevalent diseases of our time and one of the most exciting discoveries is the significant presence of antioxidants within the coffee beans.
-        Antioxidants are proven to help mitigate the chances of heart diseases and cancer.",
+        name: "Water",
+        context: "Drink 2 liter water everyday! But for you who want to lose weight, it is better to drink cold water every day instead body temperatured water. Losing weight by drinking cold water is one of the easiest diet out there. Cold water foces your body to work, because it takes energy to heaten up the cold water to body temperature before it's used. Drink 8 glasses of cold water everyday and you'll see how amazing this thing works.",
         ) 
     Tip.create!(
-        name: "Black beans",
-        context: "A cup of black beans packs a whopping 15 grams of satisfying protein and doesn't contain any of the saturated fat found in other protein sources, like red meat.",
+        name: "Lemon",
+        context: "Lemon contains a lot of vitamin C. The Vitamin C found in lemon helps in amplifying fat oxidation. Just add lemon to your water can make a huge difference. It cleans your body from toxin and impurities and repairs function in the body.",
         ) 
     Tip.create!(
-        name: "Avocado",
-        context: "Stick to a quarter or a half of an avocado and watch that belly fat melt away. The creamy fruit is also packed with fiber and protein",
+        name: "Oatmel",
+        context: "Oatmeal has a lot of benefits. It has high levels of fiber, low levels of fat, and high levels of protein. One cup of Oatmeal is only about 130 calories. It also helps to remove your bad cholesterol. Oatmeal has unique fiber, called beta-glucan. It effects your cholesterol levels. You can cook it whatever you want. You can cook it with milk or just water. You can add some fresh fruits in the end. Or change the milk/water with your favourite juice.",
         )
     Tip.create!(
-        name: "Blueberries",
-        context: "Best known for their anti-aging effects, blueberries, while tiny, are a powerful figure-friendly eat: A 1-cup serving sets you back only 80 calories, and helps you feel full with 4 grams of fiber.",
+        name: "Blueberry",
+        context: "Blueberry is one of the richest source of antioxidants. The antioxidants helps to neutralize free-radical which can lead to cancer and other age related diseases. Without antioxidants, we would be prone to numerous infections and diseases. That's why blueberry is really good for your health. Blueberry antioxidants are also thought to delay aging by their naturally cleansing properties in the body. You can find blueberry almost in every store you meet, they are available almost year round and you can just combine it with everything. They are good with salad, you can make home made blueberry jam, you can also make blueberry muffin, and of course blueberries are delicious and healthy snack.",
         )
+
 
 
 
