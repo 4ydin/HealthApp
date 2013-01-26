@@ -3,7 +3,7 @@ class DailiesController < ApplicationController
   # GET /dailies.json
   def index
     @profile = Profile.find(params[:profile_id])
-    @dailies = @profile.dailies.all
+    @dailies = @profile.dailies.order(:calculated_at)
 
     respond_to do |format|
       format.html # index.html.erb
