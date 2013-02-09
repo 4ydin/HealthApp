@@ -56,6 +56,8 @@ class PeriodsController < ApplicationController
     end
   end
 
+
+  
   # PUT /periods/1
   # PUT /periods/1.json
   def update
