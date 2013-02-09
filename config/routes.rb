@@ -42,6 +42,7 @@ HealthApp::Application.routes.draw do
   match '/statistic', to: 'dailies#statistic'
   match 'profiles/:profile_id/dailies' => 'dailies#show' 
   match 'profiles/:profile_id/periods' => 'periods#show'
+  match 'profiles/:profile_id/periods/new' => 'periods#create'
   #match '/tip', to: 'tips#index'
 
 
