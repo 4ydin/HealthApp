@@ -29,7 +29,7 @@ HealthApp::Application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
  
   resources :profiles do
-    resources :dailies
+    resources :dailies, :periods
   end
 
   #resources :dailies
@@ -41,6 +41,7 @@ HealthApp::Application.routes.draw do
   match '/contact', to: 'start#contact'
   match '/statistic', to: 'dailies#statistic'
   match 'profiles/:profile_id/dailies' => 'dailies#show' 
+  match 'profiles/:profile_id/periods' => 'periods#show'
   #match '/tip', to: 'tips#index'
 
 

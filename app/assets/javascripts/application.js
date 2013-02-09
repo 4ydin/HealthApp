@@ -13,3 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require jquery-ui
+
+$(function() {
+  $("#period_finished_at").datepicker();
+  $("#period_started_at").datepicker();
+});

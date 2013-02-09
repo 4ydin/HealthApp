@@ -7,14 +7,12 @@
 
 <p>
   <b>Finished:</b>
-  <%= @period.finished %>
-</p>
-
-<p>
-  <b>Duration:</b>
-  <%= @period.duration %>
+  <%= @period.finished_at %>
 </p>
 
 
-<%= link_to 'Edit', edit_period_path(@period) %> |
-<%= link_to 'Back', periods_path %>
+
+
+
+ <%= link_to "My Period Schedule", profile_periods_path(@profile), :class => "btn" %>
+

@@ -2,6 +2,7 @@ class Profile < ActiveRecord::Base
   attr_accessible :height, :weight, :name, :birth_date, :gender
   belongs_to :user
   has_many :dailies,  dependent: :destroy
+  has_many :periods,  dependent: :destroy
   after_initialize :default_values
 
 

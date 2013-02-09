@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130116182521) do
+ActiveRecord::Schema.define(:version => 20130209104920) do
 
   create_table "dailies", :force => true do |t|
     t.integer  "total"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(:version => 20130116182521) do
     t.integer  "duration"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "profile_id"
   end
 
   create_table "profiles", :force => true do |t|

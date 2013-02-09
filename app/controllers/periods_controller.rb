@@ -2,7 +2,8 @@ class PeriodsController < ApplicationController
   # GET /periods
   # GET /periods.json
   def index
-    @periods = Period.all
+    @profile = Profile.find(params[:profile_id])
+    @periods = @profile.periods
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +14,8 @@ class PeriodsController < ApplicationController
   # GET /periods/1
   # GET /periods/1.json
   def show
-    @period = Period.find(params[:id])
+    @profile = Profile.find(params[:profile_id])
+    @period = @profile.periods.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,8 +26,8 @@ class PeriodsController < ApplicationController
   # GET /periods/new
   # GET /periods/new.json
   def new
-    @period = Period.new
-
+    @profile = Profile.find(params[:profile_id])
+    @period = @profile.periods.new
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @period }
@@ -40,15 +42,16 @@ class PeriodsController < ApplicationController
   # POST /periods
   # POST /periods.json
   def create
-    @period = Period.new(params[:period])
+    @profile = Profile.find(params[:profile_id])
+    @period = @profile.periods.new(params[:period])
 
     respond_to do |format|
       if @period.save
-        format.html { redirect_to @period, notice: 'Period was successfully created.' }
-        format.json { render json: @period, status: :created, location: @period }
+        format.html { redirect_to profile_periods_path(@profile), notice: 'Period was successfully created.' }
+        format.json { render json: profile_periods_path(@profile), status: :created, location: @period }
       else
         format.html { render action: "new" }
-        format.json { render json: @period.errors, status: :unprocessable_entity }
+        #format.json { render json: @period.errors, status: :unprocessable_entity }
       end
     end
   end

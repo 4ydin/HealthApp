@@ -1,5 +1,14 @@
-<h1>New period</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Back', periods_path %>
+<h1>Insert Your Period Date</h1>
+<%= form_for ([@profile, @period]) do |f| %>
+	 <p>  
+	 <h4>Start Date</h4>
+     <%= f.text_field :started_at %>
+     <br>
+     <br>
+     <h4>End Date</h4>
+     <%= f.text_field :finished_at %>
+     </p>
+    <br>
+      <%= f.submit "Insert the Date", class: "btn btn-large btn-primary" %>
+    </p>
+    <% end %>

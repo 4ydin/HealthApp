@@ -11,5 +11,6 @@
 #
 
 class Period < ActiveRecord::Base
-  attr_accessible :duration, :finished, :started_at
+  attr_accessible :duration, :finished_at, :started_at, :profile_id
+  belongs_to :profile
 end
