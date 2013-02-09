@@ -11,17 +11,11 @@ class Profile < ActiveRecord::Base
       self.birth_date ||= "1990-11-11"
       self.weight ||= 50
       self.height ||= 160
-      self.gender ||= 'f'
     end
 
-  def countIdealWeight(h, g)
+  def countIdealWeight(h)
     weight  = self.weight
-  	if (g == 'f')
-  		weight = h-110
-  	else 
-  		weight = h-100
-  	end
-    
+  	weight = h-110  
   	return weight
   end
 

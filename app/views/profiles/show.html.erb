@@ -20,13 +20,8 @@
 </p>
 
 <p>
-  <b>Gender:</b>
-  <%= @profile.gender %>
-</p>
-
-<p>
  <b>Ideal Weight:</b>
-  <%= @profile.countIdealWeight(@profile.height, @profile.gender) %>
+  <%= @profile.countIdealWeight(@profile.height) %>
 </p> 
 
 </div>
